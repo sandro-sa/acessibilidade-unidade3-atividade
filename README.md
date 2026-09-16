@@ -158,9 +158,13 @@ justificativa entra no corpo do PR.
 
 ## Como testar o que você corrigiu
 
-1. **Só com o teclado.** Percorra a página inteira com Tab. Você alcança e ativa todos os
-   controles? O foco fica visível? Na versão original, os dois botões "Adicionar ao carrinho" são
-   inalcançáveis — descobrir por quê já resolve um dos 34 problemas.
+1. **Só com o teclado.** Percorra a página inteira com Tab. 
+   
+   Você alcança e ativa todos os controles?
+   
+   O foco fica visível? 
+   
+   Na versão original, os dois botões "Adicionar ao carrinho" são inalcançáveis descobrir por quê já resolve um dos 34 problemas.
 2. **Com leitor de tela.** No NVDA (gratuito, Windows): `H` pula entre cabeçalhos, `Insert + F7`
    abre a lista de elementos com as abas Links, Cabeçalhos e Landmarks, `T` pula entre tabelas,
    `F` entre campos de formulário. Compare a lista de elementos antes e depois da sua correção.
@@ -176,5 +180,3 @@ Prazo: **02/08/2026**.
 
 Dúvidas sobre a atividade: abra uma **issue** neste repositório. Dúvidas sobre Git e GitHub Pages:
 comece pelo [`GUIA-GIT-E-PAGES.md`](GUIA-GIT-E-PAGES.md).
-
-
