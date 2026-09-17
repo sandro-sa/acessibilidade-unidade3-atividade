@@ -30,64 +30,64 @@ estar no lugar. Não há resposta única para todos os itens — argumente sua e
 
 ### 1. Aparência disfarçada de significado
 
-- [ ] Existe algum texto em negrito ou itálico que na verdade tem **importância** ou **ênfase**? Qual tag deveria estar ali?
-- [ ] Existe algum sublinhado que pode ser confundido com link?
-- [ ] Existe alguma tag obsoleta que só controla tamanho de fonte?
+- [x] Existe algum texto em negrito ou itálico que na verdade tem **importância** ou **ênfase**? Qual tag deveria estar ali?
+- [x] Existe algum sublinhado que pode ser confundido com link?
+- [x] Existe alguma tag obsoleta que só controla tamanho de fonte?
 
 ### 2. Hierarquia de cabeçalhos
 
-- [ ] Liste, na ordem, todos os cabeçalhos da página. Quantos `<h1>` existem?
-- [ ] Algum título "parece" título mas não usa tag de cabeçalho?
-- [ ] Existe algum nível pulado (h1 → h3, h2 → h6)?
-- [ ] Algum cabeçalho foi escolhido pelo **tamanho** que produz, e não pelo nível que representa?
-- [ ] Desenhe a hierarquia final como um índice de livro. Ela faz sentido?
+- [x] Liste, na ordem, todos os cabeçalhos da página. Quantos `<h1>` existem?
+- [x] Algum título "parece" título mas não usa tag de cabeçalho?
+- [x] Existe algum nível pulado (h1 → h3, h2 → h6)?
+- [x] Algum cabeçalho foi escolhido pelo **tamanho** que produz, e não pelo nível que representa?
+- [x] Desenhe a hierarquia final como um índice de livro. Ela faz sentido?
 
 ### 3. Landmarks
 
-- [ ] A página tem cabeçalho de site? Está em `<header>`?
-- [ ] A navegação principal está em `<nav>`?
-- [ ] Existe **mais de uma** área de navegação? Como um leitor de tela diferencia uma da outra?
-- [ ] Onde começa e termina o conteúdo principal? Ele está em `<main>`?
-- [ ] O conteúdo complementar da lateral está em `<aside>`?
-- [ ] O rodapé está em `<footer>`?
-- [ ] O idioma da página está declarado na tag `<html>`?
+- [x] A página tem cabeçalho de site? Está em `<header>`?
+- [x] A navegação principal está em `<nav>`?
+- [x] Existe **mais de uma** área de navegação? Como um leitor de tela diferencia uma da outra?
+- [x] Onde começa e termina o conteúdo principal? Ele está em `<main>`?
+- [x] O conteúdo complementar da lateral está em `<aside>`?
+- [x] O rodapé está em `<footer>`?
+- [x] O idioma da página está declarado na tag `<html>`?
 
 ### 4. Tabelas
 
-- [ ] Quantas tabelas existem no arquivo? Todas contêm **dados tabulares**?
-- [ ] Alguma tabela está sendo usada só para **posicionar** elementos na tela? O que substitui isso hoje?
-- [ ] A tabela de dados tem um título programático?
-- [ ] As células de cabeçalho são `<th>` ou apenas `<td>` estilizadas?
-- [ ] Existe indicação de qual cabeçalho pertence a qual linha/coluna?
-- [ ] Se o leitor de tela anunciar só "R$ 7.150,00", o usuário sabe de que modelo se trata?
+- [x] Quantas tabelas existem no arquivo? Todas contêm **dados tabulares**?
+- [x] Alguma tabela está sendo usada só para **posicionar** elementos na tela? O que substitui isso hoje?
+- [x] A tabela de dados tem um título programático?
+- [x] As células de cabeçalho são `<th>` ou apenas `<td>` estilizadas?
+- [x] Existe indicação de qual cabeçalho pertence a qual linha/coluna?
+- [x] Se o leitor de tela anunciar só "R$ 7.150,00", o usuário sabe de que modelo se trata?
 
 ### 5. Links e botões
 
-- [ ] Leia **só** os textos dos links, sem o parágrafo em volta. Dá para saber o destino de cada um?
-- [ ] Quantos links diferentes têm o mesmo texto? Eles levam ao mesmo lugar?
-- [ ] Algum link abre em nova aba? O usuário é avisado?
-- [ ] O link do ícone do carrinho tem um nome acessível útil?
-- [ ] Existe algum elemento que **parece** botão mas não é `<button>`? Teste: dá para chegar nele só com Tab e ativar com Enter?
-- [ ] Existe algum `<a>` que **executa uma ação** em vez de navegar?
-- [ ] Pergunta-guia para cada um: *isso navega ou isso executa uma ação?*
+- [x] Leia **só** os textos dos links, sem o parágrafo em volta. Dá para saber o destino de cada um?
+- [x] Quantos links diferentes têm o mesmo texto? Eles levam ao mesmo lugar?
+- [x] Algum link abre em nova aba? O usuário é avisado?
+- [x] O link do ícone do carrinho tem um nome acessível útil?
+- [x] Existe algum elemento que **parece** botão mas não é `<button>`? Teste: dá para chegar nele só com Tab e ativar com Enter?
+- [x] Existe algum `<a>` que **executa uma ação** em vez de navegar?
+- [x] Pergunta-guia para cada um: *isso navega ou isso executa uma ação?*
 
 ### 6. Listas
 
-- [ ] O menu do topo é uma lista de verdade?
-- [ ] Existe alguma sequência de itens separada por `<br>`?
-- [ ] Os produtos formam uma lista? E os links da barra lateral?
-- [ ] Em cada caso: a ordem importa? (`<ol>`) Ou não? (`<ul>`)
+- [x] O menu do topo é uma lista de verdade?
+- [x] Existe alguma sequência de itens separada por `<br>`?
+- [x] Os produtos formam uma lista? E os links da barra lateral?
+- [x] Em cada caso: a ordem importa? (`<ol>`) Ou não? (`<ul>`)
 
 ### 7. Formulário
 
-- [ ] Cada campo tem um `<label>` de verdade?
-- [ ] Algum campo é identificado **apenas** pelo placeholder? O que acontece quando o usuário começa a digitar?
-- [ ] Algum `<label>` existe mas não está associado ao campo? Teste clicando no texto do rótulo: o foco vai para o input?
-- [ ] A obrigatoriedade é comunicada só pelo asterisco visual?
-- [ ] As mensagens de erro dizem **qual campo**, **o que está errado** e **como corrigir**?
-- [ ] As mensagens de erro estão programaticamente ligadas aos seus campos?
-- [ ] Os botões de rádio estão agrupados? Ao chegar neles, dá para saber **qual é a pergunta**?
-- [ ] E as caixas de seleção?
+- [x] Cada campo tem um `<label>` de verdade?
+- [x] Algum campo é identificado **apenas** pelo placeholder? O que acontece quando o usuário começa a digitar?
+- [x] Algum `<label>` existe mas não está associado ao campo? Teste clicando no texto do rótulo: o foco vai para o input?
+- [x] A obrigatoriedade é comunicada só pelo asterisco visual?
+- [x] As mensagens de erro dizem **qual campo**, **o que está errado** e **como corrigir**?
+- [x] As mensagens de erro estão programaticamente ligadas aos seus campos?
+- [x] Os botões de rádio estão agrupados? Ao chegar neles, dá para saber **qual é a pergunta**?
+- [x] E as caixas de seleção?
 
 ## Como testar o que você corrigiu
 
