@@ -99,8 +99,7 @@
     }
 
     .produtosECategorias,
-    .tabela,
-    .formulario {
+    .tabela{
       padding: 2.5%;
     }
 
@@ -168,39 +167,6 @@
       font-weight: 700;
     }
 
-    label {
-      display: flex;
-      margin: 1.5%;
-    }
-
-    form a {
-      text-decoration: none;
-      color: #fff;
-    }
-
-    .nomeEmailSenhaTel {
-      width: 100%;
-      padding: 9px;
-      border: 1px solid #c3c9d6;
-      border-radius: 5px;
-      margin-bottom: 12px;
-      font-size: 14px;
-    }
-
-    fieldset {
-      margin-bottom: 2%;
-    }
-
-    legend {
-      margin-left: 2%;
-    }
-
-    .campoObrigatorio {
-      color: #c0392b;
-      font-size: 13px;
-      margin: -6px 0 12px;
-    }
-
     .rodape {
       background: #1f2a44;
       color: #b9c4de;
@@ -219,64 +185,6 @@
       padding: 12px 14px;
       border-radius: 6px;
       font-size: 14px;
-    }
-
-    .imagemFadeIn {
-      display: flex;
-      justify-content: center;
-    }
-
-    .imgGuitarra {
-      width: 200px;
-      height: 200px;
-    }
-
-    .imgGuitarra:hover {
-      width: 210px;
-      height: 210px;
-      transition: 2s;
-    }
-
-    .imgLoja {
-      width: 700px;
-      height: 300px;
-      margin-top: 2%;
-      border-radius: 10px;
-      box-shadow: 0px 10px 10px 5px grey;
-      background-size: 100% 100%;
-      animation: slider 10s linear infinite;
-    }
-
-    @keyframes slider {
-      0% {
-        background-image: url(https://img.magnific.com/fotos-premium/um-tabuleiro-de-madeira-em-uma-loja-de-musica-com-instrumentos-musicais-e-partituras_839035-568636.jpg);
-      }
-
-      30% {
-        background-image: url(https://hammer.hammeronline.com.br/images/instrumentosdahammer.jpeg);
-      }
-
-      60% {
-        background-image: url(https://agencianovofoco.com.br/wp-content/uploads/2024/11/a-importancia-do-marketing-digital-para-lojas-de-instrumentos-musicais-1.jpeg);
-      }
-
-      80% {
-        background-image: url(https://ogimg.infoglobo.com.br/in/14961029-6c2-47a/FT1086A/2015-779964567-2015010242699.jpg_20150102.jpg);
-      }
-
-      100% {
-        background-image: url(https://www.travel2concert.com.br/wp-content/uploads/2025/03/Drum-Shop-curitiba-brazil-travel2concert-1-1024x611.jpg);
-      }
-    }
-
-    @media(prefers-reduced-motion: reduce) {
-
-      .imgGuitarra:hover {
-        transition: 0.5s;
-      }
-      .imgLoja{
-        animation: slider 5s linear infinite;
-      }
     }
   </style>
 </head>
@@ -349,25 +257,17 @@
       <h3>Guitarras Elétricas</h3>
 
 
-      <section class="cardsGuitarra">
         <div class="cartao">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHJic_3X70ZcJwnLOr33Xo3N9dv7n4FPj6YG_Y8SlrQ&s=10"
-            alt="Imagem de Stratocaster HSS preta" class="imgGuitarra">
           <b>Stratocaster HSS</b>
           <p>R$ 4.290,00</p>
           <button class="botao" onclick="adicionarCarrinho(101)">Adicionar ao carrinho</button>
         </div>
 
         <div class="cartao">
-          <img
-            src="https://images.tcdn.com.br/img/img_prod/1487732/guitarra_gibson_les_paul_standard_premium_plus_amb_1_20260507135946_2a029014f179.jpg"
-            alt="Imagem de Les Paul Standard madeira" class="imgGuitarra">
           <b>Les Paul Standard</b>
           <p>R$ 7.150,00</p>
           <button class="botao" onclick="adicionarCarrinho(102)">Adicionar ao carrinho</button>
         </div>
-      </section>
 
       <h2>Baterias</h2>
 
@@ -426,48 +326,7 @@
       </table>
 
     </section>
-
-    <section class="formulario">
-      <h1>Fale com um vendedor</h1>
-
-      <p class="aviso">Os campos marcados com <span style="color:#c0392b">*</span> são obrigatórios.</p>
-
-      <form action="/enviar" method="post">
-
-        <label><b>Nome completo *</b></label>
-        <input type="text" class="nomeEmailSenhaTel" id="nome" placeholder="Digite seu nome completo" required>
-
-        <label><b>E-mail *</b></label>
-        <input type="email" class="nomeEmailSenhaTel" id="email" placeholder="E-mail *" required>
-        <p class="campoObrigatorio">Campo obrigatório.</p>
-
-        <input type="password" class="nomeEmailSenhaTel" id="senha" placeholder="Crie uma senha" required>
-        <p class="campoObrigatorio">Campo obrigatório.</p>
-
-        <label><b>Telefone</b></label>
-        <input type="tel" class="nomeEmailSenhaTel" id="telefone" placeholder="(00) 00000-0000">
-
-        <fieldset>
-          <legend><b>Turno preferido para contato *</b></legend>
-          <label><input type="radio" name="turno" id="manha" value="manha" required> Manhã<br></label>
-          <label><input type="radio" name="turno" id="tarde" value="tarde"> Tarde<br></label>
-          <label><input type="radio" name="turno" id="noite" value="noite"> Noite</label>
-        </fieldset>
-
-        <fieldset>
-          <legend><b>Assuntos de interesse</b></legend>
-          <label for=""><input type="checkbox" name="int" id="i1"> Guitarras<br></label>
-          <label for=""><input type="checkbox" name="int" id="i2"> Baterias<br></label>
-          <label for=""><input type="checkbox" name="int" id="i3"> Teclados</label>
-        </fieldset>
-
-        <button class="botao" onclick="enviarFormulario()">Enviar</button>
-
-      </form>
-    </section>
   </main>
-
-
 
   <footer class="rodape">
     Harmonia Instrumentos Musicais &bull; CNPJ 00.000.000/0001-00 &bull;
