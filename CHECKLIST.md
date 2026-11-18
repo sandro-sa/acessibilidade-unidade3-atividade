@@ -30,27 +30,27 @@ estar no lugar. Não há resposta única para todos os itens — argumente sua e
 
 ### 1. Aparência disfarçada de significado
 
-- [ ] Existe algum texto em negrito ou itálico que na verdade tem **importância** ou **ênfase**? Qual tag deveria estar ali?
-- [ ] Existe algum sublinhado que pode ser confundido com link?
-- [ ] Existe alguma tag obsoleta que só controla tamanho de fonte?
+- [x] Existe algum texto em negrito ou itálico que na verdade tem **importância** ou **ênfase**? Qual tag deveria estar ali?
+- [x] Existe algum sublinhado que pode ser confundido com link?
+- [x] Existe alguma tag obsoleta que só controla tamanho de fonte?
 
 ### 2. Hierarquia de cabeçalhos
 
-- [ ] Liste, na ordem, todos os cabeçalhos da página. Quantos `<h1>` existem?
+- [x] Liste, na ordem, todos os cabeçalhos da página. Quantos `<h1>` existem?
 - [ ] Algum título "parece" título mas não usa tag de cabeçalho?
-- [ ] Existe algum nível pulado (h1 → h3, h2 → h6)?
+- [x] Existe algum nível pulado (h1 → h3, h2 → h6)?
 - [ ] Algum cabeçalho foi escolhido pelo **tamanho** que produz, e não pelo nível que representa?
 - [ ] Desenhe a hierarquia final como um índice de livro. Ela faz sentido?
 
 ### 3. Landmarks
 
-- [ ] A página tem cabeçalho de site? Está em `<header>`?
+- [x] A página tem cabeçalho de site? Está em `<header>`?
 - [ ] A navegação principal está em `<nav>`?
-- [ ] Existe **mais de uma** área de navegação? Como um leitor de tela diferencia uma da outra?
-- [ ] Onde começa e termina o conteúdo principal? Ele está em `<main>`?
-- [ ] O conteúdo complementar da lateral está em `<aside>`?
-- [ ] O rodapé está em `<footer>`?
-- [ ] O idioma da página está declarado na tag `<html>`?
+- [x] Existe **mais de uma** área de navegação? Como um leitor de tela diferencia uma da outra?
+- [x] Onde começa e termina o conteúdo principal? Ele está em `<main>`?
+- [x] O conteúdo complementar da lateral está em `<aside>`?
+- [x] O rodapé está em `<footer>`?
+- [x] O idioma da página está declarado na tag `<html>`?
 
 ### 4. Tabelas
 
@@ -63,11 +63,11 @@ estar no lugar. Não há resposta única para todos os itens — argumente sua e
 
 ### 5. Links e botões
 
-- [ ] Leia **só** os textos dos links, sem o parágrafo em volta. Dá para saber o destino de cada um?
-- [ ] Quantos links diferentes têm o mesmo texto? Eles levam ao mesmo lugar?
-- [ ] Algum link abre em nova aba? O usuário é avisado?
+- [x] Leia **só** os textos dos links, sem o parágrafo em volta. Dá para saber o destino de cada um?
+- [x] Quantos links diferentes têm o mesmo texto? Eles levam ao mesmo lugar?
+- [x] Algum link abre em nova aba? O usuário é avisado?
 - [ ] O link do ícone do carrinho tem um nome acessível útil?
-- [ ] Existe algum elemento que **parece** botão mas não é `<button>`? Teste: dá para chegar nele só com Tab e ativar com Enter?
+- [x] Existe algum elemento que **parece** botão mas não é `<button>`? Teste: dá para chegar nele só com Tab e ativar com Enter?
 - [ ] Existe algum `<a>` que **executa uma ação** em vez de navegar?
 - [ ] Pergunta-guia para cada um: *isso navega ou isso executa uma ação?*
 
