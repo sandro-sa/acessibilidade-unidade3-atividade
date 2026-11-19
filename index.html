@@ -1,213 +1,1357 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Harmonia Instrumentos Musicais</title>
+<title>Guitarras Elétricas — Harmonia Instrumentos Musicais</title>
+<link rel="stylesheet" href="assets/css/style.css">
+
 <style>
-  * { box-sizing: border-box; }
-  body { margin:0; font-family: system-ui, "Segoe UI", Arial, sans-serif; color:#1c1c1e; background:#f6f6f8; line-height:1.55; }
-  .wrap { max-width: 1040px; margin: 0 auto; background:#fff; }
-  #topo { background:#1f2a44; color:#fff; padding:18px 24px; }
-  .titulo-principal { font-size: 30px; font-weight: 800; letter-spacing:-.5px; }
-  .subtitulo { color:#b9c4de; font-size:14px; }
-  #menu { background:#2c3a5e; padding:10px 24px; }
-  #menu span a { color:#fff; text-decoration:none; margin-right:20px; font-size:15px; display:inline-block; padding:4px 0; }
-  #menu span a:hover { text-decoration:underline; }
-  #trilha { padding:10px 24px; font-size:13px; color:#5b6478; background:#eef0f5; }
-  #trilha a { color:#5b6478; }
-  #miolo { display:flex; gap:28px; padding:24px; align-items:flex-start; }
-  #conteudo { flex:1 1 auto; min-width:0; }
-  .lateral { flex:0 0 250px; background:#f2f4f9; border:1px solid #e0e4ee; padding:16px; border-radius:8px; font-size:14px; }
-  .h1-falso { font-size:28px; font-weight:800; margin:0 0 6px; }
-  h3, h2, h6 { margin: 26px 0 10px; }
-  h3 { font-size:21px; }
-  h2 { font-size:21px; }
-  h6 { font-size:17px; font-weight:700; }
-  .cartao { border:1px solid #e0e4ee; border-radius:8px; padding:14px; margin:10px 0; }
-  .botao { display:inline-block; background:#c0392b; color:#fff; padding:9px 16px; border-radius:6px; cursor:pointer; font-weight:600; font-size:14px; }
-  table { border-collapse: collapse; width:100%; margin:14px 0; font-size:14px; }
-  td { border:1px solid #d9dee9; padding:9px 11px; }
-  .layout td { border:none; padding:0; vertical-align: top; }
-  .cab { background:#eef0f5; font-weight:700; }
-  input[type=text], input[type=email], input[type=password] { width:100%; padding:9px; border:1px solid #c3c9d6; border-radius:5px; margin-bottom:12px; font-size:14px; }
-  .erro { color:#c0392b; font-size:13px; margin:-6px 0 12px; }
-  #rodape { background:#1f2a44; color:#b9c4de; padding:20px 24px; font-size:13px; margin-top:10px; }
-  #rodape a { color:#dbe2f2; }
-  .aviso { background:#fff8e1; border:1px solid #f0dfa8; padding:12px 14px; border-radius:6px; font-size:14px; }
+  * {
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: #f6f6f8;
+    --cor-superficie: #ffffff;
+    --cor-texto: #1c1c1e;
+
+    --cor-header: #1f2a44;
+    --cor-nav: #2c3a5e;
+    --cor-texto-header: #ffffff;
+    --cor-subtitulo: #b9c4de;
+
+    
+    --cor-link: #005fcc;
+    --cor-link-header: #ffffff;
+    --cor-link-footer: #dbe2f2;
+    --cor-link-trilha: #5b6478;
+
+    --cor-card: #ffffff;
+    --cor-borda: #d9dee9;
+    --cor-borda-card: #e0e4ee;
+    --cor-sombra: rgba(0, 0, 0, 0.15);
+
+    --cor-aside-fundo: #f2f4f9;
+    --cor-aside-borda: #e0e4ee;
+
+    --cor-tabela-header: #2c3a5e;
+    --cor-tabela-header-texto: #ffffff;
+    --cor-tabela-linha: #ffffff;
+    --cor-tabela-linha-alternada: #f2f4f9;
+
+    --cor-input-fundo: #ffffff;
+    --cor-input-borda: #c3c9d6;
+    --cor-input-texto: #1c1c1e;
+
+    --cor-botao: #c0392b;
+    --cor-botao-texto: #ffffff;
+    --cor-botao-primario: #0150fa; 
+    --cor-botao-primario-hover: #43a8fa;
+
+    --cor-dica: #5b6478;
+    --cor-erro: #a32b1c;
+    --cor-obrigatorio: #a32b1c;
+
+    --cor-fieldset-borda: #d9dee9;
+
+    --cor-aviso-fundo: #fff8e1;
+    --cor-aviso-borda: #f0dfa8;
+    --cor-aviso-texto: #1c1c1e;
+
+    --cor-skip-fundo: #ffffff;
+    --cor-skip-texto: #000000;
+    --cor-skip-borda: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, "Segoe UI", Arial, sans-serif;
+    color: var(--cor-texto);
+    background: var(--cor-fundo);
+    line-height: 1.55;
+}
+
+.wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    background: var(--cor-superficie);
+}
+
+header.principal {
+    background: var(--cor-header);
+    color: var(--cor-texto-header);
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+header.principal a {
+    color: var(--cor-link-header);
+}
+
+.nome-site {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin: 0 0 6px;
+}
+
+.subtitulo {
+    color: var(--cor-subtitulo);
+    font-size: 14px;
+    margin: 0;
+}
+
+nav.principal {
+    background: var(--cor-nav);
+    padding: 10px 24px;
+}
+
+nav.principal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav.principal a {
+    color: var(--cor-link-header);
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-block;
+    padding: 4px 0;
+}
+
+nav.principal a:hover,
+nav.principal a:focus-visible {
+    text-decoration: underline;
+}
+
+nav.trilha {
+    padding: 10px 24px;
+    font-size: 13px;
+    color: var(--cor-link-trilha);
+    background: var(--cor-aside-fundo);
+}
+
+nav.trilha ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+nav.trilha li + li::before {
+    content: "› ";
+}
+
+nav.trilha a {
+    color: var(--cor-link-trilha);
+}
+
+a {
+    color: var(--cor-link);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--cor-link);
+    outline-offset: 2px;
+}
+
+.miolo {
+    display: flex;
+    gap: 28px;
+    padding: 24px;
+    align-items: flex-start;
+}
+
+main {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+main h1 {
+    font-size: 28px;
+    margin: 0 0 6px;
+}
+
+main h2 {
+    font-size: 21px;
+    margin: 26px 0 10px;
+}
+
+main h3 {
+    font-size: 17px;
+    margin: 20px 0 8px;
+}
+
+aside {
+    flex: 0 0 250px;
+    background: var(--cor-aside-fundo);
+    border: 1px solid var(--cor-aside-borda);
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+aside h2 {
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside li {
+    margin-bottom: 12px;
+}
+
+.lista-produtos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cartao {
+    background: var(--cor-card);
+    border: 1px solid var(--cor-borda-card);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 10px 0;
+    box-shadow: 0 3px 8px var(--cor-sombra);
+}
+
+.cartao h4 {
+    margin: 0 0 4px;
+    font-size: 16px;
+}
+
+.preco {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button.acao {
+    background: var(--cor-botao);
+    color: var(--cor-botao-texto);
+    padding: 9px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+button.acao:hover {
+    filter: brightness(0.92);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 14px 0;
+    font-size: 14px;
+}
+
+caption {
+    text-align: left;
+    font-weight: 700;
+    padding-bottom: 8px;
+}
+
+th,
+td {
+    border: 1px solid var(--cor-borda);
+    padding: 10px 12px;
+    text-align: left;
+}
+
+thead th {
+    background: var(--cor-tabela-header);
+    color: var(--cor-tabela-header-texto);
+    font-weight: 700;
+}
+
+tbody th[scope="row"] {
+    background: var(--cor-tabela-linha);
+    color: var(--cor-texto);
+    font-weight: 700;
+}
+
+tbody td {
+    background: var(--cor-tabela-linha);
+    color: var(--cor-texto);
+}
+
+tbody tr:nth-child(even) th[scope="row"],
+tbody tr:nth-child(even) td {
+    background: var(--cor-tabela-linha-alternada);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin: 14px 0 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 9px;
+    background: var(--cor-input-fundo);
+    color: var(--cor-input-texto);
+    border: 1px solid var(--cor-input-borda);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.dica {
+    font-size: 13px;
+    color: var(--cor-dica);
+    margin: 4px 0 0;
+}
+
+.erro {
+    color: var(--cor-erro);
+    font-size: 13px;
+    margin: 6px 0 0;
+    font-weight: 600;
+}
+
+input[aria-invalid="true"] {
+    border-color: var(--cor-erro);
+    border-width: 2px;
+}
+
+fieldset {
+    border: 1px solid var(--cor-fieldset-borda);
+    border-radius: 6px;
+    margin: 18px 0;
+    padding: 12px 14px;
+}
+
+legend {
+    font-weight: 600;
+    padding: 0 6px;
+}
+
+.opcao {
+    margin: 6px 0;
+}
+
+.opcao label {
+    display: inline;
+    font-weight: 400;
+    margin: 0 0 0 4px;
+}
+
+footer.principal {
+    background: var(--cor-header);
+    color: var(--cor-subtitulo);
+    padding: 20px 24px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+footer.principal a {
+    color: var(--cor-link-footer);
+}
+
+.aviso {
+    background: var(--cor-aviso-fundo);
+    border: 1px solid var(--cor-aviso-borda);
+    color: var(--cor-aviso-texto);
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.obrigatorio {
+    color: var(--cor-obrigatorio);
+}
+
+.skip-link {
+    position: absolute;
+    left: -99999px;
+    top: 10px;
+}
+
+.skip-link:focus {
+    left: 10px;
+    background: var(--cor-skip-fundo);
+    color: var(--cor-skip-texto);
+    padding: 10px 16px;
+    z-index: 1000;
+    border: 2px solid var(--cor-skip-borda);
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        /* Cores principais */
+        --cor-fundo: #121212;
+        --cor-superficie: #1e1e1e;
+        --cor-texto: #f5f5f5;
+
+        /* Cabeçalho e navegação */
+        --cor-header: #111827;
+        --cor-nav: #1f2937;
+        --cor-texto-header: #ffffff;
+        --cor-subtitulo: #c5cee3;
+
+        /* Links */
+        --cor-link: #8ab4f8;
+        --cor-link-header: #ffffff;
+        --cor-link-footer: #dbe2f2;
+        --cor-link-trilha: #c4c9d4;
+
+        /* Cards */
+        --cor-card: #262626;
+        --cor-borda: #555555;
+        --cor-borda-card: #4b4b4b;
+        --cor-sombra: rgba(0, 0, 0, 0.45);
+
+        /* Aside */
+        --cor-aside-fundo: #24272d;
+        --cor-aside-borda: #4b4f57;
+
+        /* Tabela */
+        --cor-tabela-header: #1f2937;
+        --cor-tabela-header-texto: #ffffff;
+        --cor-tabela-linha: #1e1e1e;
+        --cor-tabela-linha-alternada: #262626;
+
+        /* Campos */
+        --cor-input-fundo: #242424;
+        --cor-input-borda: #666666;
+        --cor-input-texto: #f5f5f5;
+
+        /* Botões */
+        --cor-botao: #c0392b;
+        --cor-botao-texto: #ffffff;
+         --cor-botao-primario: #0150fa; 
+         --cor-botao-primario-hover: #43a8fa;
+
+        /* Mensagens */
+        --cor-dica: #c4c9d4;
+        --cor-erro: #ff8a7a;
+        --cor-obrigatorio: #ff8a7a;
+
+        /* Fieldset */
+        --cor-fieldset-borda: #555555;
+
+        /* Aviso */
+        --cor-aviso-fundo: #332d18;
+        --cor-aviso-borda: #665b2c;
+        --cor-aviso-texto: #f5f5f5;
+
+        /* Skip link */
+        --cor-skip-fundo: #1e1e1e;
+        --cor-skip-texto: #ffffff;
+        --cor-skip-borda: #ffffff;
+    }
+}
+
+
+
+ .banner { 
+    position: relative; 
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    min-height: 220px; 
+    padding: 40px 24px; 
+    margin: 30px 0; 
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1c1c1c, #343434);
+    color: white; 
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18); 
+
+    animation: aparecer 2s ease-in-out; 
+}
+
+.banner::before {
+    content: "";
+    position: absolute; 
+    inset: 0; 
+    border: 2px solid rgba(255, 255, 255, 0.12); 
+    border-radius: inherit;
+    pointer-events: none; 
+}
+
+.banner h2 { 
+    position: relative;
+    margin: 0 0 12px;
+    font-size: 2rem; 
+}
+
+.banner p { 
+    position: relative;
+    margin: 0; 
+    font-size: 1.1rem; 
+}
+
+@keyframes aparecer { 
+    from{ 
+        opacity: 0; 
+    } 
+    to{ 
+        opacity: 1;
+    }   
+}
+
+.lista-produtos { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+}
+
+.cartao { 
+  box-sizing: border-box; 
+  flex: 1 1 250px; 
+  min-width: 0; 
+  background: var(--cor-card); 
+  border: 1px solid var(--cor-borda-card); 
+  border-radius: 8px; 
+  padding: 14px; 
+  margin: 0; 
+  box-shadow: 0 3px 8px var(--cor-sombra); 
+  display: flex; 
+  flex-direction: column; 
+   transition: transform 0.3s ease; 
+}
+
+.imagem-produto { 
+  display: block; 
+  width: 100%; 
+  height: 200px; 
+  object-fit: contain; 
+  margin-bottom: 12px; 
+  border-radius: 6px; 
+}
+
+.cartao h4 { 
+  margin: 0 0 4px; 
+  font-size: 16px; 
+}
+
+.preco { 
+  display: block; 
+  margin-bottom: 10px; 
+}
+
+.cartao .acao { 
+  margin-top: auto; 
+}
+
+.cartao:hover{ 
+    transform: scale(1.03); 
+}
+
+.slides { 
+    text-align: center; 
+}
+
+.titulo-slide, .descricao-slide{ 
+    display: flex; 
+    justify-content: center; 
+}
+
+.slide { 
+    display: none; 
+}
+
+.slide img { 
+    display: block; 
+    max-width: 100%; 
+    width: auto; 
+    height: 300px; 
+    margin: 0 auto; 
+    object-fit: cover; 
+    border-radius: 18px; 
+    border: 4px solid #fff; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22); 
+    transition: transform 0.3s ease, 
+                box-shadow 0.3s ease; 
+}
+
+.slide img:hover { 
+    transform: scale(1.02); 
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.28); 
+}
+
+.slide.ativo { 
+    display: block; 
+    animation: aparecer-slides 2s ease; 
+}
+
+.btn-primario{ 
+    color: var(--cor-botao-texto); 
+    background: var(--cor-botao-primario); 
+    padding: 9px 16px; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    font-size: 14px; 
+    font-family: inherit; 
+
+}
+
+.btn-primario:hover{ 
+    color: var(--cor-botao-texto); 
+    background: var(--cor-botao-primario-hover); 
+    transform: scale(1.03); 
+}
+
+@keyframes aparecer-slides { 
+    from { 
+        opacity: 0; 
+    }
+    to { 
+        opacity: 1; 
+    }
+}
+@media (prefers-reduced-motion: reduce) { 
+    *, 
+    *::before,
+    *::after { 
+        animation-duration: 0.01ms !important; 
+        animation-iteration-count: 1 !important; 
+        transition-duration: 0.01ms !important; 
+        scroll-behavior: auto !important; 
+    }
+    .slide.ativo { 
+        animation: none; 
+    }
+    .slide img { 
+        transition: none; 
+    }
+    .slide img:hover { 
+        transform: none; 
+    }
+    .cartao:hover { 
+    transform: none; 
+  }
+  
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 9px;
+    background: var(--cor-input-fundo);
+    color: var(--cor-input-texto);
+    border: 1px solid var(--cor-input-borda);
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: inherit;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--cor-link);
+    outline-offset: 2px;
+}
+
+.resumo-erros {
+    border: 2px solid var(--cor-erro);
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 6px;
+}
+
+.resumo-erros h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.resumo-erros a {
+    color: var(--cor-erro);
+    font-weight: 600;
+}
+.honeypot {
+    position: absolute;
+    left: -9999px;
+}
+input[aria-invalid="true"] {
+    border-color: var(--cor-erro);
+    border-width: 2px;
+}
+.logo-loja {
+    width: 220px;
+    height: 120px;
+}
+
 </style>
 </head>
 <body>
 
+  <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
+
 <div class="wrap">
 
-<table class="layout" width="100%">
-<tr>
-<td>
-  <div id="topo">
-    <table class="layout" width="100%">
-      <tr>
-        <td>
-          <div class="titulo-principal">Harmonia Instrumentos Musicais</div>
-          <div class="subtitulo">Tudo para o seu som desde 1998</div>
-        </td>
-        <td align="right">
-          <a href="carrinho.html"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Cpath%20d%3D%22M1.5%202h3l2.7%2012.4a2%202%200%200%200%202%201.6h8.1a2%202%200%200%200%202-1.6L21%206H6%22%2F%3E%3C%2Fsvg%3E" width="34" height="34" alt="carrinho"></a>
-        </td>
-      </tr>
-    </table>
+  <header class="principal">
+    <div>
+      <p class="nome-site">Harmonia Instrumentos Musicais</p>
+      <p class="subtitulo">Tudo para o seu som desde 1998</p>
+    </div>
+    <a href="carrinho.html">
+    <img
+      src="./logo.jfif"
+      alt="Loja Harmonia Instrumentos Musicais"
+      class="logo-loja">
+</a>
+  </header>
+
+  <nav class="principal" aria-label="Navegação principal">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="guitarras.html">Guitarras</a></li>
+      <li><a href="baterias.html">Baterias</a></li>
+      <li><a href="teclados.html">Teclados</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <nav class="trilha" aria-label="Trilha de navegação">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="guitarras.html">Guitarras</a></li>
+      <li aria-current="page">Guitarras Elétricas</li>
+    </ul>
+  </nav>
+
+  <div class="miolo">
+
+    <main id="conteudo-principal" tabindex="-1">
+
+      <h1>Loja de Instrumentos</h1>
+
+      <section class="banner" aria-labelledby="titulo-banner">
+
+        <h2 id="titulo-banner">Semana da Música</h2>
+
+        <p>Confira nossas ofertas especiais</p>
+
+      </section>
+
+      <p>
+        Bem-vindo à nossa loja. Trabalhamos com <strong>as melhores marcas</strong> do mercado e oferecemos
+        <em>garantia estendida</em> em todos os produtos. Nossa nova <ins>política de trocas</ins> entrou em
+        vigor neste mês. <a href="politica.html">Leia a política de trocas completa</a>.
+      </p>
+
+      <section class="carrossel" aria-labelledby="titulo-carrossel">
+
+        <h2 id="titulo-carrossel">Destaques da loja</h2>
+
+        <div class="slide ativo" aria-hidden="false">
+          <img src="./guitarra eletrica.jfif" alt="Guitarra elétrica">
+          <h3 class="titulo-slide">Guitarras elétricas</h3>
+          <p class="descricao-slide">Confira nosssos modelos</p>
+        </div>
+
+        <div class="slide" aria-hidden="true">
+          <img src="./bateria musical.jpg" alt="Bateria músical">
+          <h3 class="titulo-slide">Baterias</h3>
+          <p class="descricao-slide">Cofira nossas baterias</p>
+        </div>
+
+        <div class="slide" aria-hidden="true">
+          <img src="./piano de cauda.jfif" alt="Piano de cauda">
+          <h3 class="titulo-slide">Pianos</h3>
+          <p class="descricao-slide">Confira nossa linha de pianos acústicos</p>
+        </div>
+
+        <button type="button" id="btn-carrossel-proximo" class="btn-primario">Próximo destaque</button>
+
+      </section>
+
+
+      <h2>Guitarras</h2>
+
+      <p>
+        Confira nossa linha completa de guitarras elétricas e acústicas. Todos os modelos passam por
+        revisão técnica antes do envio.
+        <a href="catalogo.pdf" target="_blank" rel="noopener">
+          Baixar o catálogo completo em PDF <span class="dica">(abre em nova aba)</span>
+        </a>.
+      </p>
+
+      <h3>Guitarras Elétricas</h3>
+
+      <ul class="lista-produtos">
+        <li class="cartao">
+            <img src="./Stratocaster.webp" alt="">
+          <h4>Stratocaster HSS</h4>
+          <span class="preco">R$ 4.290,00</span>
+          <button type="button" class="acao" onclick="adicionarCarrinho(101)">
+            Adicionar Stratocaster HSS ao carrinho
+          </button>
+        </li>
+        <li class="cartao">
+           <img src="./les paul.jpg" alt="">
+          <h4>Les Paul Standard</h4>
+          <span class="preco">R$ 7.150,00</span>
+          <button type="button" class="acao" onclick="adicionarCarrinho(102)">
+            Adicionar Les Paul Standard ao carrinho
+          </button>
+        </li>
+      </ul>
+
+      <h2>Baterias</h2>
+
+      <p>
+        Kits acústicos e eletrônicos para estúdio e palco.
+        <a href="baterias.html">Ver todos os modelos de bateria</a>.
+      </p>
+
+      <h3>Bateria Eletrônica</h3>
+
+      <p>Modelos com pads de mesh e módulo de sons integrado.</p>
+
+      <h2>Categorias em destaque</h2>
+
+      <ul>
+        <li>Guitarras e Baixos</li>
+        <li>Baterias e Percussão</li>
+        <li>Teclados e Sintetizadores</li>
+        <li>Microfones</li>
+        <li>Acessórios</li>
+      </ul>
+
+      <h2>Comparativo de modelos</h2>
+
+      <table>
+        <caption>Comparativo de guitarras elétricas — especificações e preços</caption>
+        <thead>
+          <tr>
+            <th scope="col">Modelo</th>
+            <th scope="col">Captadores</th>
+            <th scope="col">Escala</th>
+            <th scope="col">Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Stratocaster HSS</th>
+            <td>2 single + 1 humbucker</td>
+            <td>648 mm</td>
+            <td>R$ 4.290,00</td>
+          </tr>
+          <tr>
+            <th scope="row">Les Paul Standard</th>
+            <td>2 humbuckers</td>
+            <td>628 mm</td>
+            <td>R$ 7.150,00</td>
+          </tr>
+          <tr>
+            <th scope="row">Telecaster Vintage</th>
+            <td>2 single coil</td>
+            <td>648 mm</td>
+            <td>R$ 3.980,00</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </main>
+
+    <aside aria-labelledby="titulo-relacionado">
+      <h2 id="titulo-relacionado">Conteúdo relacionado</h2>
+      <ul>
+        <li><a href="afinacao.html">Como afinar sua guitarra</a></li>
+        <li><a href="manutencao.html">Manutenção de instrumentos</a></li>
+        <li>
+          <a href="blog.html" target="_blank" rel="noopener">
+            Blog da Harmonia <span class="dica">(abre em nova aba)</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
   </div>
 
-  <div id="menu">
-    <span><a href="index.html">Início</a></span>
-    <span><a href="guitarras.html">Guitarras</a></span>
-    <span><a href="baterias.html">Baterias</a></span>
-    <span><a href="teclados.html">Teclados</a></span>
-    <span><a href="contato.html">Contato</a></span>
-  </div>
-
-  <div id="trilha">
-    <a href="index.html">Início</a> &gt; <a href="guitarras.html">Guitarras</a> &gt; Guitarras Elétricas
-  </div>
-</td>
-</tr>
-</table>
-
-<div id="miolo">
-
-  <div id="conteudo">
-
-    <div class="h1-falso">Loja de Instrumentos</div>
-
+  <footer class="principal">
     <p>
-      Bem-vindo à nossa loja. Trabalhamos com <b>as melhores marcas</b> do mercado e oferecemos
-      <i>garantia estendida</i> em todos os produtos. Nossa nova <u>política de trocas</u> entrou em vigor
-      neste mês. Para saber mais, <a href="politica.html">clique aqui</a>.
+      Harmonia Instrumentos Musicais &bull; CNPJ 00.000.000/0001-00 &bull;
+      <a href="termos.html">Termos de uso</a> &bull;
+      <a href="privacidade.html">Política de privacidade</a>
     </p>
-
-    <h3>Guitarras</h3>
-
-    <p>
-      Confira nossa linha completa de guitarras elétricas e acústicas. Todos os modelos passam por
-      revisão técnica antes do envio. Veja o catálogo completo em PDF,
-      <a href="catalogo.pdf" target="_blank">clique aqui</a>.
-    </p>
-
-    <h6>Guitarras Elétricas</h6>
-
-    <div class="cartao">
-      <b>Stratocaster HSS</b><br>
-      R$ 4.290,00<br>
-      <div class="botao" onclick="adicionarCarrinho(101)">Adicionar ao carrinho</div>
-    </div>
-
-    <div class="cartao">
-      <b>Les Paul Standard</b><br>
-      R$ 7.150,00<br>
-      <div class="botao" onclick="adicionarCarrinho(102)">Adicionar ao carrinho</div>
-    </div>
-
-    <h2>Baterias</h2>
-
-    <p>Kits acústicos e eletrônicos para estúdio e palco. <a href="baterias.html">Saiba mais</a>.</p>
-
-    <h6>Bateria Eletrônica</h6>
-
-    <p>Modelos com pads de mesh e módulo de sons integrado.</p>
-
-    <font size="6">Categorias em destaque</font>
-
-    <div class="lista-falsa">
-      Guitarras e Baixos<br>
-      Baterias e Percussão<br>
-      Teclados e Sintetizadores<br>
-      Microfones<br>
-      Acessórios<br>
-    </div>
-
-    <h3>Comparativo de modelos</h3>
-
-    <table>
-      <tr>
-        <td class="cab">Modelo</td>
-        <td class="cab">Captadores</td>
-        <td class="cab">Escala</td>
-        <td class="cab">Preço</td>
-      </tr>
-      <tr>
-        <td class="cab">Stratocaster HSS</td>
-        <td>2 single + 1 humbucker</td>
-        <td>648 mm</td>
-        <td>R$ 4.290,00</td>
-      </tr>
-      <tr>
-        <td class="cab">Les Paul Standard</td>
-        <td>2 humbuckers</td>
-        <td>628 mm</td>
-        <td>R$ 7.150,00</td>
-      </tr>
-      <tr>
-        <td class="cab">Telecaster Vintage</td>
-        <td>2 single coil</td>
-        <td>648 mm</td>
-        <td>R$ 3.980,00</td>
-      </tr>
-    </table>
-
-    <h3>Fale com um vendedor</h3>
-
-    <div class="aviso">Os campos marcados com <span style="color:#c0392b">*</span> são obrigatórios.</div>
-
-    <form action="/enviar" method="post">
-
-      <div style="font-weight:600; margin:14px 0 6px;">Nome completo *</div>
-      <input type="text" id="nome" placeholder="Digite seu nome completo">
-
-      <input type="email" id="email" placeholder="E-mail *">
-      <div class="erro">Erro.</div>
-
-      <label>Telefone</label>
-      <input type="text" id="telefone" placeholder="(00) 00000-0000">
-
-      <input type="password" id="senha" placeholder="Crie uma senha">
-      <div class="erro">Erro.</div>
-
-      <div style="font-weight:600; margin:14px 0 6px;">Turno preferido para contato *</div>
-      <div>
-        <input type="radio" name="turno" id="manha" value="manha"> Manhã<br>
-        <input type="radio" name="turno" id="tarde" value="tarde"> Tarde<br>
-        <input type="radio" name="turno" id="noite" value="noite"> Noite
-      </div>
-
-      <div style="font-weight:600; margin:14px 0 6px;">Assuntos de interesse</div>
-      <div>
-        <input type="checkbox" name="int" id="i1"> Guitarras<br>
-        <input type="checkbox" name="int" id="i2"> Baterias<br>
-        <input type="checkbox" name="int" id="i3"> Teclados
-      </div>
-
-      <p><a href="#" onclick="enviarFormulario()" class="botao">Enviar</a></p>
-
-    </form>
-
-  </div>
-
-  <div class="lateral">
-    <div style="font-weight:700; margin-bottom:8px;">Conteúdo relacionado</div>
-    <a href="afinacao.html">Aqui</a> você aprende a afinar sua guitarra.<br><br>
-    <a href="manutencao.html">Saiba mais</a> sobre manutenção de instrumentos.<br><br>
-    <a href="blog.html" target="_blank">Clique aqui</a> para ler nosso blog.
-  </div>
+  </footer>
 
 </div>
 
-<div id="rodape">
-  Harmonia Instrumentos Musicais &bull; CNPJ 00.000.000/0001-00 &bull;
-  <a href="termos.html">Termos de uso</a> &bull;
-  <a href="privacidade.html">Privacidade</a>
-</div>
+<script src="assets/js/javascript.js"></script>
 
-</div>
+<script>
+const slides = document.querySelectorAll('.slide');
+const botaoCarrossel = document.querySelector("#btn-carrossel-proximo");
 
+let carrosselAtual = 0;
+
+botaoCarrossel.addEventListener('click', function(){
+
+    slides[carrosselAtual].classList.remove('ativo');
+    carrosselAtual++;
+    
+    if(carrosselAtual >= slides.length){
+        carrosselAtual = 0;
+    }
+    slides[carrosselAtual].classList.add('ativo');
+
+});
+
+const formulario = document.querySelector("#form-contato");
+const resumoErros = document.querySelector("#resumo-erros");
+
+
+// ==========================================
+// FUNÇÕES AUXILIARES
+// ==========================================
+
+// Exibe uma mensagem de erro no campo.
+function mostrarErro(campo, elementoErro, mensagem) {
+
+    campo.setAttribute("aria-invalid", "true");
+
+    elementoErro.textContent = mensagem;
+    elementoErro.setAttribute("role", "alert");
+}
+
+
+// Remove a mensagem e o estado de erro.
+function limparErro(campo, elementoErro) {
+
+    campo.removeAttribute("aria-invalid");
+
+    elementoErro.textContent = "";
+    elementoErro.removeAttribute("role");
+}
+
+
+// ==========================================
+// VALIDAÇÃO DO NOME
+// ==========================================
+
+const nome = document.querySelector("#nome");
+const erroNome = document.querySelector("#erro-nome");
+
+function validarNome() {
+
+    const nomeInformado = nome.value.trim();
+
+    if (nomeInformado.length < 3 || !/\S+\s+\S+/.test(nomeInformado)) {
+
+        mostrarErro(
+            nome,
+            erroNome,
+            "Informe seu nome completo."
+        );
+
+        return false;
+    }
+
+    limparErro(nome, erroNome);
+
+    return true;
+}
+
+nome.addEventListener("blur", validarNome);
+
+
+// ==========================================
+// VALIDAÇÃO DO E-MAIL
+// ==========================================
+
+const email = document.querySelector("#email");
+const erroEmail = document.querySelector("#erro-email");
+
+function validarEmail() {
+
+    if (email.value.trim() === "") {
+
+        mostrarErro(
+            email,
+            erroEmail,
+            "Informe seu endereço de e-mail."
+        );
+
+        return false;
+    }
+
+    if (!email.validity.valid) {
+
+        mostrarErro(
+            email,
+            erroEmail,
+            "Informe um e-mail válido, como nome@dominio.com."
+        );
+
+        return false;
+    }
+
+    limparErro(email, erroEmail);
+
+    return true;
+}
+
+email.addEventListener("blur", validarEmail);
+
+
+// ==========================================
+// VALIDAÇÃO DO CPF
+// ==========================================
+
+const cpf = document.querySelector("#cpf");
+const erroCpf = document.querySelector("#erro-cpf");
+
+function validarCpf() {
+
+    const somenteNumeros = cpf.value.replace(/\D/g, "");
+
+    if (somenteNumeros.length !== 11) {
+
+        mostrarErro(
+            cpf,
+            erroCpf,
+            "Informe o CPF utilizando 11 números."
+        );
+
+        return false;
+    }
+
+    limparErro(cpf, erroCpf);
+
+    return true;
+}
+
+cpf.addEventListener("blur", validarCpf);
+
+
+// ==========================================
+// VALIDAÇÃO DA DATA DE NASCIMENTO
+// ==========================================
+
+const nascimento = document.querySelector("#nascimento");
+const erroNascimento = document.querySelector("#erro-nascimento");
+
+function validarNascimento() {
+
+    if (nascimento.value === "" || !nascimento.validity.valid) {
+
+        mostrarErro(
+            nascimento,
+            erroNascimento,
+            "Informe uma data de nascimento válida."
+        );
+
+        return false;
+    }
+
+    limparErro(nascimento, erroNascimento);
+
+    return true;
+}
+
+nascimento.addEventListener("blur", validarNascimento);
+
+
+// ==========================================
+// VALIDAÇÃO DA SENHA
+// ==========================================
+
+const senha = document.querySelector("#senha");
+const erroSenha = document.querySelector("#erro-senha");
+
+function validarSenha() {
+
+    if (senha.value.length < 8) {
+
+        mostrarErro(
+            senha,
+            erroSenha,
+            "A senha deve possuir pelo menos 8 caracteres."
+        );
+
+        return false;
+    }
+
+    limparErro(senha, erroSenha);
+
+    return true;
+}
+
+senha.addEventListener("blur", validarSenha);
+
+
+// ==========================================
+// VALIDAÇÃO DA CONFIRMAÇÃO DE SENHA
+// ==========================================
+
+const confirmarSenha = document.querySelector("#confirmar-senha");
+const erroConfirmarSenha = document.querySelector("#erro-confirmar-senha");
+
+function validarConfirmacaoSenha() {
+
+    if (confirmarSenha.value === "") {
+
+        mostrarErro(
+            confirmarSenha,
+            erroConfirmarSenha,
+            "Confirme sua senha."
+        );
+
+        return false;
+    }
+
+    if (confirmarSenha.value !== senha.value) {
+
+        mostrarErro(
+            confirmarSenha,
+            erroConfirmarSenha,
+            "A confirmação de senha deve ser igual à senha."
+        );
+
+        return false;
+    }
+
+    limparErro(confirmarSenha, erroConfirmarSenha);
+
+    return true;
+}
+
+confirmarSenha.addEventListener(
+    "blur",
+    validarConfirmacaoSenha
+);
+
+
+// Revalida a confirmação se a senha original mudar.
+senha.addEventListener("change", function () {
+
+    if (confirmarSenha.value !== "") {
+        validarConfirmacaoSenha();
+    }
+});
+
+
+// ==========================================
+// VALIDAÇÃO DO ACEITE DOS TERMOS
+// ==========================================
+
+const aceite = document.querySelector("#aceite");
+const erroAceite = document.querySelector("#erro-aceite");
+
+function validarAceite() {
+
+    if (!aceite.checked) {
+
+        mostrarErro(
+            aceite,
+            erroAceite,
+            "Você precisa aceitar os termos para continuar."
+        );
+
+        return false;
+    }
+
+    limparErro(aceite, erroAceite);
+
+    return true;
+}
+
+aceite.addEventListener("change", validarAceite);
+
+
+// ==========================================
+// RESUMO DE ERROS
+// ==========================================
+
+function mostrarResumo(erros) {
+
+    // Limpa o conteúdo anterior.
+    resumoErros.innerHTML = "";
+
+    // Cria o título.
+    const titulo = document.createElement("h2");
+
+    titulo.textContent = "Corrija os seguintes campos:";
+
+    resumoErros.appendChild(titulo);
+
+    // Cria a lista.
+    const lista = document.createElement("ul");
+
+    erros.forEach(function (erro) {
+
+        const item = document.createElement("li");
+
+        const link = document.createElement("a");
+
+        // Link para o campo com erro.
+        link.href = `#${erro.campo.id}`;
+
+        link.textContent = erro.mensagem;
+
+        item.appendChild(link);
+
+        lista.appendChild(item);
+    });
+
+    resumoErros.appendChild(lista);
+
+    // Exibe o resumo.
+    resumoErros.hidden = false;
+
+    // Move o foco para o resumo.
+    resumoErros.focus();
+}
+
+
+// ==========================================
+// VALIDAÇÃO NO ENVIO
+// ==========================================
+
+formulario.addEventListener("submit", function (event) {
+
+    // Impede o envio real nesta atividade.
+    event.preventDefault();
+
+    const erros = [];
+
+    // Nome
+    if (!validarNome()) {
+
+        erros.push({
+            campo: nome,
+            mensagem: erroNome.textContent
+        });
+    }
+
+    // E-mail
+    if (!validarEmail()) {
+
+        erros.push({
+            campo: email,
+            mensagem: erroEmail.textContent
+        });
+    }
+
+    // CPF
+    if (!validarCpf()) {
+
+        erros.push({
+            campo: cpf,
+            mensagem: erroCpf.textContent
+        });
+    }
+
+    // Data de nascimento
+    if (!validarNascimento()) {
+
+        erros.push({
+            campo: nascimento,
+            mensagem: erroNascimento.textContent
+        });
+    }
+
+    // Senha
+    if (!validarSenha()) {
+
+        erros.push({
+            campo: senha,
+            mensagem: erroSenha.textContent
+        });
+    }
+
+    if (!validarConfirmacaoSenha()) {
+
+        erros.push({
+            campo: confirmarSenha,
+            mensagem: erroConfirmarSenha.textContent
+        });
+    }
+
+    if (!validarAceite()) {
+
+        erros.push({
+            campo: aceite,
+            mensagem: erroAceite.textContent
+        });
+    }
+
+    if (erros.length > 0) {
+
+        mostrarResumo(erros);
+
+        return;
+    }
+
+    resumoErros.hidden = true;
+    resumoErros.innerHTML = "";
+
+    alert("Formulário preenchido corretamente.");
+});
+
+resumoErros.addEventListener("click", function (event) {
+
+    const link = event.target.closest("a");
+
+    if (!link || !resumoErros.contains(link)) {
+        return;
+    }
+
+    const seletor = link.getAttribute("href");
+
+    const campo = document.querySelector(seletor);
+
+    if (campo) {
+
+        event.preventDefault();
+
+        campo.focus();
+    }
+});
+</script>
 </body>
 </html>
