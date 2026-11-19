@@ -1,4 +1,4 @@
-# Atividade — Conserte a página
+# Atividade — Harmonia de instrumentos musicais
 
 **Unidade 3 · HTML Semântico: a Base da Acessibilidade**
 
