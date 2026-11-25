@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Harmonia Instrumentos Musicais</title>
+  <script src="./responsividade.js" defer></script>
   <style>
     * {
       margin: 0;
@@ -43,9 +44,14 @@
       font-size: 14px;
     }
 
-    .carrinho {
+    .menuEcarrinho {
       display: flex;
       justify-content: right;
+      gap: 10px;
+    }
+
+    #menuHamburguer {
+      display: none;
     }
 
     .menu {
@@ -89,7 +95,7 @@
       min-width: 0;
     }
 
-    .tituloConteudoRelacionado{
+    .tituloConteudoRelacionado {
       font-size: 18px;
       margin-top: -1%;
       margin-bottom: 2%;
@@ -221,6 +227,72 @@
       border-radius: 6px;
       font-size: 14px;
     }
+
+    @media (max-width: 768px) {
+
+      .topo,
+      .menu,
+      .trilha,
+      .rodape {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      #menuHamburguer {
+        display: flex;
+        background: none;
+        border: none;
+      }
+
+      .lojaDeInstrumentosConteudoRelaciado {
+        flex-direction: column;
+        gap: 20px;
+        padding: 16px;
+      }
+
+      .conteudoRelacionado {
+        flex: none;
+        width: 100%;
+      }
+
+      .produtosECategorias,
+      .tabela,
+      .formulario {
+        padding: 16px;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .menu span {
+        width: 100%;
+      }
+
+      .menu span a {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .menu span:last-child a {
+        border-bottom: none;
+      }
+
+      .botao {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
@@ -231,10 +303,14 @@
       <div class="topo">
         <h1 class="titulo-principal">Harmonia Instrumentos Musicais</h1>
         <h2 class="subtitulo">Tudo para o seu som desde 1998</h2>
-        <a href="carrinho.html" class="carrinho">
-          <img
-            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Cpath%20d%3D%22M1.5%202h3l2.7%2012.4a2%202%200%200%200%202%201.6h8.1a2%202%200%200%200%202-1.6L21%206H6%22%2F%3E%3C%2Fsvg%3E"
-            width="34" height="34" alt="carrinho"></a>
+        <div class="menuEcarrinho">
+          <button id="menuHamburguer"><img src="./assets/imagem_2026-11-25_122937701-removebg-preview.png" width="34"
+              height="34" alt="menu-hamburguer"></button>
+          <a href="carrinho.html" class="carrinho">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Cpath%20d%3D%22M1.5%202h3l2.7%2012.4a2%202%200%200%200%202%201.6h8.1a2%202%200%200%200%202-1.6L21%206H6%22%2F%3E%3C%2Fsvg%3E"
+              width="34" height="34" alt="carrinho"></a>
+        </div>
       </div>
     </section>
 
@@ -387,6 +463,7 @@
       <a href="privacidade.html">Privacidade</a>
     </p>
   </footer>
+
 
 </body>
 
