@@ -2,156 +2,62 @@
 
 **Unidade 3 · HTML Semântico: a Base da Acessibilidade**
 
-Esta é a página da loja fictícia **Harmonia Instrumentos Musicais**. Abra `index.html` no navegador: o layout está alinhado, as cores estão certas, os botões clicam. Nenhum cliente que enxerga reclamou.
+---
 
-A loja recebeu uma reclamação de um cliente que usa leitor de tela. Ele não consegue encontrar o conteúdo principal, não sabe para onde os links levam e desistiu do formulário de contato.
+<h2>Funcionalidades aplicadas</h2>
+<ul>
+  <li>Implementação de tags semânticas (correcao)</li>
+  <li>Implementação de skip-link (skip-link)</li>
+  <li>Implementação de reduce motion (prefers-reduced-motion)</li>
+  <li>Implementação de tema escuro (prefers-color-scheme-dark)</li>
+  <li>Implementação de tela de contatos com form (contatos)</li>
+  <li>Implementação de responsividade para tablets e celulares (responsividade)</li>
+</ul>
 
-**A página tem 34 problemas de semântica e acessibilidade. Sua tarefa é consertá-los.**
+<h2>Linguagem utilizada</h2>
+<table>
+  <tbody>
+    <tr>
+      <td>JavaScript</td>
+      <td>HTML</td>
+      <td>CSS</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
-## O que você vai entregar
+<h2>O que foi feito</h2>
 
-1. Um **fork** deste repositório com o `index.html` corrigido.
-2. Uma **página publicada no GitHub Pages** mostrando sua versão corrigida.
-3. Um **Pull Request** para este repositório, com o link do seu Pages no corpo do PR.
+<h4>Correcao</h4>
+<p>Nessa versao da pagina inicial, algumas tags foram modificadas para tags semanticas: header, main, footer, aside, table, h1, h2, h3...</p>
 
-O Pull Request **é** a entrega. O diff dele mostra exatamente o que você mudou  é isso que será avaliado. Ele não será mesclado; será revisado, comentado e fechado.
-
----
-
-## Passo a passo
-
-### 1. Faça o fork
-
-Clique em **Fork**, no topo desta página. Você vai ficar com uma cópia do repositório na sua conta.
-
-### 2. Traga para o seu computador
-
-```bash
-git clone https://github.com/SEU-USUARIO/acessibilidade-unidade3-atividade.git cd acessibilidade-unidade3-atividade
-git checkout -b correcao
-```
-
-> Nunca trabalhe direto na branch `main`. Trabalhe na branch `correcao`.
-
-### 3. Conserte o `index.html`
-
-Use o [`CHECKLIST.md`](CHECKLIST.md) como guia. Ele tem 7 blocos de verificação, na mesma ordem da aula: apresentação vs. semântica, cabeçalhos, landmarks, tabelas, links e botões, listas e formulários.
-
-**Regras da correção:**
-
-- Você pode acrescentar, trocar e remover tags HTML à vontade.
-- Você pode ajustar os seletores do CSS para acompanhar as tags novas.
-- **Mantenha o layout**: mesmas cores, mesmas colunas, mesmos cartões, mesma tabela. Trocar `<div>` por `<main>` ou `<td>` por `<th>` não deve reposicionar nada na tela.
-- Exceção: algumas correções **acrescentam informação visível** de propósito o aviso "(abre em nova aba)", o texto "(obrigatório)", o `<caption>` da tabela, a borda do `<fieldset>`e mensagens de erro específicas. Essas mudanças são esperadas.
-- Não use JavaScript. Não use ARIA onde uma tag HTML nativa já resolve o problema.
-  
-> Se ao final a página ficou visualmente equivalente e estruturalmente diferente, você entendeu a aula.
-
-### 4. Faça commits pequenos
-
-Um commit por bloco do checklist ajuda muito na hora da revisão:
-
-```bash
-git add index.html
-git commit -m "Corrige hierarquia de cabecalhos"
-```
-
-Sugestão de mensagens: `Adiciona landmarks`, `Corrige textos de link`, `Transforma tabela de layout em CSS Grid`, `Associa labels aos campos do formulario`.
-
-### 5. Envie para o seu fork
-
-```bash
-git push -u origin correcao
-```
-
-### 6. Publique no GitHub Pages
-
-No **seu fork**: `Settings` → `Pages` → em **Source**, escolha `Deploy from a branch` → selecione a branch **`correcao`** e a pasta **`/ (root)`** → `Save`.
-
-Espere de 1 a 2 minutos e recarregue a página de Settings. O endereço vai aparecer no topo, no formato:
-
-```
-https://SEU-USUARIO.github.io/acessibilidade-unidade3-atividade/
-```
-
-**Confira que o link abre a sua versão corrigida** antes de continuar.
-
-Se você não tem certeza de nenhum destes passos, veja o [`GUIA-GIT-E-PAGES.md`](GUIA-GIT-E-PAGES.md), que tem os comandos comentados e o caminho pelo site do GitHub.
-
-### 7. Abra o Pull Request
-
-No seu fork, clique em **Contribute** → **Open pull request**.
-
-- **Base:** `main` deste repositório (o do professor)
-- **Compare:** a sua branch `correcao`
-
-O corpo do PR já vem com um formulário. Preencha, principalmente:
-
-- o **link do seu GitHub Pages**;
-- a lista dos problemas que você corrigiu, agrupados pelos 7 blocos;
-- por que cada troca melhora a experiência de quem usa tecnologia assistiva.
-
-Pronto. A entrega está feita.
+<img width="1826" height="899" alt="image" src="https://github.com/user-attachments/assets/bfc8f9c7-e8d3-443e-9398-656ccd681bf0" />
+<img width="1839" height="846" alt="image" src="https://github.com/user-attachments/assets/64dd9154-6ea4-48f0-9735-3da52d0eec6b" />
 
 ---
 
-## Verificação automática
-
-Assim que o PR abrir, um teste automático roda sobre a sua página e publica um relatório. Para ver: aba **Checks** do seu PR → **Acessibilidade** → abra o resumo do job.
-
-O relatório traz validação de HTML e uma varredura WCAG 2.1 AA com o axe-core. Use como apoio mas leia com atenção o que vem a seguir.
-
-Na versão original desta página, as duas ferramentas juntas apontam **menos da metade** dos 34 problemas. O axe encontra 6 tipos de problema; o validador de HTML, 15 erros de sintaxe. Nenhum dos dois percebe:
-
-- textos de link sem sentido isolado ("clique aqui", "saiba mais")
-- `<div>` fazendo papel de botão, inalcançável pelo teclado
-- lista simulada com `<br>` em vez de `<ul>`
-- tabela usada para layout
-- `<td>` estilizado no lugar de `<th scope>`
-- `<caption>` ausente
-- grupo de campos sem `<fieldset>`/`<legend>`
-- `<b>`/`<i>`/`<u>` onde cabia `<strong>`/`<em>`/`<ins>`
-- texto alternativo que existe mas não descreve nada útil
-- mensagens de erro genéricas como "Erro."
-
-**Um relatório limpo não significa que a página está correta.** Essa é, aliás, uma das lições mais importantes da unidade: acessibilidade não se resolve rodando uma ferramenta. O checklist continua sendo o guia.
+<h4>Skip-link</h4>
+<p>Na tag header, foi adicionado um link (a) visualmente invisível, apenas visto navegando pelo tab do teclado. O skip-link ajuda pessoal com deficiência visual e motora, que conseguem acessar o conteúdo principal sem muito esforço através dessa mecânica. </p>
 
 ---
 
-## Como você será avaliado
-
-| Faixa        | Critério                                                                                            |
-| ------------ | --------------------------------------------------------------------------------------------------- |
-| Insuficiente | Menos de 10 itens corrigidos, ou mudanças apenas no CSS                                             |
-| Suficiente   | Cabeçalhos e landmarks corrigidos (blocos 2 e 3)                                                    |
-| Bom          | Acrescenta links, listas e tabela (blocos 4, 5 e 6)                                                 |
-| Excelente    | Formulário completo com `fieldset`/`legend`, `required` e mensagens de erro programáticas (bloco 7) |
-
-Achar 15 problemas com boa justificativa vale mais do que listar 30 sem explicar nenhum. A
-justificativa entra no corpo do PR.
+<h4>Prefers-reduced-motion</h4>
+<p>Foi adicionado ao CSS da pagina o @keyframes para fazer um carrossel de slides e o @media(prefers-reduced-motion: reduce) para o usuário ajustar o tempo de transição conforme sua preferência. A implementação dessa funcionalidade ajuda pessoas com neurodivergências e sensibilidade visual. </p>
 
 ---
 
-## Como testar o que você corrigiu
-
-1. **Só com o teclado.** Percorra a página inteira com Tab.
-   Você alcança e ativa todos os controles?
-   O foco fica visível?
-   Na versão original, os dois botões "Adicionar ao carrinho" são inalcançáveis descobrir por quê já resolve um dos 34 problemas.
-3. **Com leitor de tela.** No NVDA (gratuito, Windows): `H` pula entre cabeçalhos, `Insert + F7` abre a lista de elementos com as abas Links, Cabeçalhos e     Landmarks, `T` pula entre tabelas, `F` entre campos de formulário. Compare a lista de elementos antes e depois da sua correção.
-   No macOS, o VoiceOver (`Cmd + F5`) tem o rotor em `VO + U`.
-4. **Validador do W3C.** <https://validator.w3.org/nu/>
-5. **Comparação visual.** Abra a original e a sua versão em abas lado a lado.
+<h4>Prefers-color-scheme-dark</h4>
+<p>Foi adicionado ao CSS da pagina o @media(prefers-color-scheme: dark) para adequar a cor dos elementos ao tema determinado pelo usuário no navegador de sua preferência. As cores foram adicionadas na pseudo-classe :root. Essa implementação ajuda pessoas com sensibilidade visual.</p>
 
 ---
 
-## Prazo e dúvidas
+<h4>Pagina de contatos</h4>
+<p>O formulário de contatos que estava na pagina inicial (home) foi removido, e no lugar do formulário a pagina contatos foi criada e linkada na pagina inicial. No formulário são solicitadas as seguintes informações: Nome Completo, E-mail, Senha, Confirmar senha, CPF, Data de Nascimento, Telefone, Gênero, Assunto de interesse e Como ficou sabendo do site. Além das informações, o usuário deve marcar a caixinha de "Li e estou de acordo com os termos". Tambem foi adicionado um Honeypot, para identificar possíveis bots que estejam navegando pelo site.</p>
 
-Prazo: **09/09/2026**.
+---
 
-Dúvidas sobre a atividade: abra uma **issue** neste repositório. Dúvidas sobre Git e GitHub Pages:
-Comece pelo [`GUIA-GIT-E-PAGES.md`](GUIA-GIT-E-PAGES.md).
+<h4>Responsividade</h4>
+<p>Foi adicionado ao CSS o @media(max-width: 768px) para tablets e @media(max-width: 480px) para celulares, onde alguns elementos foram alterados e outros foram adicionados. Elemento adicionado: menu hambúrguer(sendo ativado com javascript). Essa implementação ajuda pessoas com aparelhos mobile a visualizar melhor os elementos do site.</p>
 
 
