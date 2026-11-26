@@ -32,6 +32,9 @@
 <h4>Correcao</h4>
 <p>Nessa versao da pagina inicial, algumas tags foram modificadas para tags semanticas: header, main, footer, aside, table, h1, h2, h3...</p>
 
+<img width="1826" height="899" alt="image" src="https://github.com/user-attachments/assets/bfc8f9c7-e8d3-443e-9398-656ccd681bf0" />
+<img width="1839" height="846" alt="image" src="https://github.com/user-attachments/assets/64dd9154-6ea4-48f0-9735-3da52d0eec6b" />
+
 ---
 
 <h4>Skip-link</h4>
