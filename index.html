@@ -20,14 +20,6 @@
       line-height: 1.55;
     }
 
-    header a{
-      color: #1f2a44;
-    }
-
-    header a:focus{
-      color: #fff;
-    }
-
     .wrap {
       max-width: 1040px;
       margin: 0 auto;
@@ -97,12 +89,6 @@
       min-width: 0;
     }
 
-    .tituloConteudoRelacionado{
-      font-size: 18px;
-      margin-top: -1%;
-      margin-bottom: 2%;
-    }
-
     .conteudoRelacionado {
       flex: 0 0 250px;
       background: #f2f4f9;
@@ -119,6 +105,7 @@
     }
 
     .tituloLojaDeInstrumentos {
+      font-size: 28px;
       font-weight: 800;
       margin: 0 0 6px;
     }
@@ -128,7 +115,15 @@
       margin: 26px 0 10px;
     }
 
+    .cardsGuitarra {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .cartao {
+      display: flex;
+      flex-direction: column;
       border: 1px solid #e0e4ee;
       border-radius: 8px;
       padding: 14px;
@@ -144,10 +139,6 @@
       cursor: pointer;
       font-weight: 600;
       font-size: 14px;
-    }
-
-    .tituloCategorias {
-      margin-top: 2%;
     }
 
     .lista {
@@ -229,6 +220,64 @@
       border-radius: 6px;
       font-size: 14px;
     }
+
+    .imagemFadeIn {
+      display: flex;
+      justify-content: center;
+    }
+
+    .imgGuitarra {
+      width: 200px;
+      height: 200px;
+    }
+
+    .imgGuitarra:hover {
+      width: 210px;
+      height: 210px;
+      transition: 2s;
+    }
+
+    .imgLoja {
+      width: 700px;
+      height: 300px;
+      margin-top: 2%;
+      border-radius: 10px;
+      box-shadow: 0px 10px 10px 5px grey;
+      background-size: 100% 100%;
+      animation: slider 10s linear infinite;
+    }
+
+    @keyframes slider {
+      0% {
+        background-image: url(https://img.magnific.com/fotos-premium/um-tabuleiro-de-madeira-em-uma-loja-de-musica-com-instrumentos-musicais-e-partituras_839035-568636.jpg);
+      }
+
+      30% {
+        background-image: url(https://hammer.hammeronline.com.br/images/instrumentosdahammer.jpeg);
+      }
+
+      60% {
+        background-image: url(https://agencianovofoco.com.br/wp-content/uploads/2024/11/a-importancia-do-marketing-digital-para-lojas-de-instrumentos-musicais-1.jpeg);
+      }
+
+      80% {
+        background-image: url(https://ogimg.infoglobo.com.br/in/14961029-6c2-47a/FT1086A/2015-779964567-2015010242699.jpg_20150102.jpg);
+      }
+
+      100% {
+        background-image: url(https://www.travel2concert.com.br/wp-content/uploads/2025/03/Drum-Shop-curitiba-brazil-travel2concert-1-1024x611.jpg);
+      }
+    }
+
+    @media(prefers-reduced-motion: reduce) {
+
+      .imgGuitarra:hover {
+        transition: 0.5s;
+      }
+      .imgLoja{
+        animation: slider 5s linear infinite;
+      }
+    }
   </style>
 </head>
 
@@ -237,13 +286,13 @@
   <header class="wrap">
     <section width="100%">
       <div class="topo">
-        <a href="#conteudoPrincipal">Pular para conteúdo principal</a>
         <h1 class="titulo-principal">Harmonia Instrumentos Musicais</h1>
         <h2 class="subtitulo">Tudo para o seu som desde 1998</h2>
         <a href="carrinho.html" class="carrinho">
           <img
             src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Cpath%20d%3D%22M1.5%202h3l2.7%2012.4a2%202%200%200%200%202%201.6h8.1a2%202%200%200%200%202-1.6L21%206H6%22%2F%3E%3C%2Fsvg%3E"
-            width="34" height="34" alt="carrinho"></a>
+            width="34" height="34" alt="carrinho">
+        </a>
       </div>
     </section>
 
@@ -259,55 +308,76 @@
       <a href="index.html">Início</a> &gt; <a href="guitarras.html">Guitarras</a> &gt;
       <a href="guitarras.html">Guitarras Elétricas</a>
     </div>
-
   </header>
 
-  <main class="wrap" id="conteudoPrincipal">
+  <main class="wrap">
+
     <section class="lojaDeInstrumentosConteudoRelaciado">
       <div class="lojaDeInstrumentos">
+
         <h1 class="tituloLojaDeInstrumentos">Loja de Instrumentos</h1>
-        <p>Bem-vindo à nossa loja. Trabalhamos com <b>as melhores marcas</b> do mercado e oferecemos
+
+        <p>
+          Bem-vindo à nossa loja. Trabalhamos com <b>as melhores marcas</b> do mercado e oferecemos
           <i>garantia estendida</i> em todos os produtos. Nossa nova <u>política de trocas</u> entrou em vigor
           neste mês. Para saber mais, <a href="politica.html">clique aqui</a>.
         </p>
+
       </div>
 
       <aside class="conteudoRelacionado">
-        <h2 class="tituloConteudoRelacionado">Conteúdo relacionado</h2>
+        <div style="font-weight:700; margin-bottom:8px;">Conteúdo relacionado</div>
         <a href="afinacao.html">Aqui</a> você aprende a afinar sua guitarra.<br><br>
         <a href="manutencao.html">Saiba mais</a> sobre manutenção de instrumentos.<br><br>
         <a href="blog.html" target="_blank">Clique aqui</a> para ler nosso blog.
       </aside>
     </section>
 
+    <div class="imagemFadeIn">
+      <div class="imgLoja" alt=""></div>
+    </div>
+
     <section class="produtosECategorias">
       <h2>Guitarras</h2>
-      <p>Confira nossa linha completa de guitarras elétricas e acústicas. Todos os modelos passam por
-        revisão técnica antes do envio. Veja o catálogo completo em PDF,<a href="catalogo.pdf" target="_blank">clique
-          aqui</a>.
+
+      <p>
+        Confira nossa linha completa de guitarras elétricas e acústicas. Todos os modelos passam por
+        revisão técnica antes do envio. Veja o catálogo completo em PDF,
+        <a href="catalogo.pdf" target="_blank">clique aqui</a>.
       </p>
 
       <h3>Guitarras Elétricas</h3>
-      <div class="cartao">
-        <b>Stratocaster HSS</b>
-        <p>R$ 4.290,00</p>
-        <button class="botao" onclick="adicionarCarrinho(101)">Adicionar ao carrinho</button>
-      </div>
 
-      <div class="cartao">
-        <b>Les Paul Standard</b>
-        <p>R$ 7.150,00</p>
-        <button class="botao" onclick="adicionarCarrinho(102)">Adicionar ao carrinho</button>
-      </div>
+
+      <section class="cardsGuitarra">
+        <div class="cartao">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHJic_3X70ZcJwnLOr33Xo3N9dv7n4FPj6YG_Y8SlrQ&s=10"
+            alt="Imagem de Stratocaster HSS preta" class="imgGuitarra">
+          <b>Stratocaster HSS</b>
+          <p>R$ 4.290,00</p>
+          <button class="botao" onclick="adicionarCarrinho(101)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="cartao">
+          <img
+            src="https://images.tcdn.com.br/img/img_prod/1487732/guitarra_gibson_les_paul_standard_premium_plus_amb_1_20260507135946_2a029014f179.jpg"
+            alt="Imagem de Les Paul Standard madeira" class="imgGuitarra">
+          <b>Les Paul Standard</b>
+          <p>R$ 7.150,00</p>
+          <button class="botao" onclick="adicionarCarrinho(102)">Adicionar ao carrinho</button>
+        </div>
+      </section>
 
       <h2>Baterias</h2>
+
       <p>Kits acústicos e eletrônicos para estúdio e palco. <a href="baterias.html">Saiba mais</a>.</p>
 
       <h3>Bateria Eletrônica</h3>
 
       <p>Modelos com pads de mesh e módulo de sons integrado.</p>
 
-      <h1 class="tituloCategorias">Categorias em destaque</h1>
+      <h1 size="6">Categorias em destaque</h1>
 
       <ul class="lista">
         <li>Guitarras e Baixos</li>
@@ -357,24 +427,29 @@
 
     <section class="formulario">
       <h1>Fale com um vendedor</h1>
+
       <p class="aviso">Os campos marcados com <span style="color:#c0392b">*</span> são obrigatórios.</p>
+
       <form action="/enviar" method="post">
-        <label for=""><b>Nome completo *</b></label>
+
+        <label><b>Nome completo *</b></label>
         <input type="text" class="nomeEmailSenhaTel" id="nome" placeholder="Digite seu nome completo" required>
-        <p class="campoObrigatorio">Campo obrigatório.</p>
-        <label for=""><b>E-mail *</b></label>
+
+        <label><b>E-mail *</b></label>
         <input type="email" class="nomeEmailSenhaTel" id="email" placeholder="E-mail *" required>
         <p class="campoObrigatorio">Campo obrigatório.</p>
+
         <input type="password" class="nomeEmailSenhaTel" id="senha" placeholder="Crie uma senha" required>
         <p class="campoObrigatorio">Campo obrigatório.</p>
-        <label for=""><b>Telefone</b></label>
+
+        <label><b>Telefone</b></label>
         <input type="tel" class="nomeEmailSenhaTel" id="telefone" placeholder="(00) 00000-0000">
 
         <fieldset>
           <legend><b>Turno preferido para contato *</b></legend>
-          <label for=""><input type="radio" name="turno" id="manha" value="manha" required> Manhã<br></label>
-          <label for=""><input type="radio" name="turno" id="tarde" value="tarde"> Tarde<br></label>
-          <label for=""><input type="radio" name="turno" id="noite" value="noite"> Noite</label>
+          <label><input type="radio" name="turno" id="manha" value="manha" required> Manhã<br></label>
+          <label><input type="radio" name="turno" id="tarde" value="tarde"> Tarde<br></label>
+          <label><input type="radio" name="turno" id="noite" value="noite"> Noite</label>
         </fieldset>
 
         <fieldset>
@@ -385,20 +460,19 @@
         </fieldset>
 
         <button class="botao" onclick="enviarFormulario()">Enviar</button>
+
       </form>
     </section>
-
   </main>
 
+
+
   <footer class="rodape">
-    <p>Harmonia Instrumentos Musicais &bull; CNPJ 00.000.000/0001-00 &bull;
-      <a href="termos.html">Termos de uso</a> &bull;
-      <a href="privacidade.html">Privacidade</a>
-    </p>
+    Harmonia Instrumentos Musicais &bull; CNPJ 00.000.000/0001-00 &bull;
+    <a href="termos.html">Termos de uso</a> &bull;
+    <a href="privacidade.html">Privacidade</a>
   </footer>
 
 </body>
 
 </html>
-
-<!--Alterado-->
