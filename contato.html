@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./contatos.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, "Segoe UI", Arial, sans-serif;
+      color: #1c1c1e;
+      background: #f6f6f8;
+      line-height: 1.55;
+    }
+
+    main {
+      section {
+        padding: 3%;
+      }
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      max-width: 1040px;
+      margin: 0 auto;
+      background: #fff;
+    }
+
+    .topo {
+      background: #1f2a44;
+      color: #fff;
+      padding: 18px 24px;
+    }
+
+    .titulo-principal {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+
+    .subtitulo {
+      color: #b9c4de;
+      font-size: 14px;
+    }
+
+    .carrinho {
+      display: flex;
+      justify-content: right;
+    }
+
+    .menu {
+      background: #2c3a5e;
+      padding: 10px 24px;
+    }
+
+    .menu span a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 15px;
+      display: inline-block;
+      padding: 4px 0;
+    }
+
+    .menu span a:hover {
+      text-decoration: underline;
+    }
+
+    .trilha {
+      padding: 10px 24px;
+      font-size: 13px;
+      color: #5b6478;
+      background: #eef0f5;
+    }
+
+    .trilha a {
+      color: #5b6478;
+    }
+
+    label {
+      display: flex;
+      margin: 1.5%;
+    }
+
+    .nomeEmailSenhaTelEtc {
+      width: 100%;
+      padding: 9px;
+      border: 1px solid #c3c9d6;
+      border-radius: 5px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    fieldset {
+      margin-bottom: 2%;
+    }
+
+    legend {
+      margin-left: 2%;
+    }
+
+    select{
+      width: 150px;
+      height: 35px;
+      padding: 1%;
+    }
+
+    .checkbox{
+      margin-left: 1%;
+    }
+
+    .rodape {
+      background: #1f2a44;
+      color: #b9c4de;
+      padding: 20px 24px;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .rodape a {
+      color: #dbe2f2;
+    }
+
+    .aviso {
+      background: #fff8e1;
+      border: 1px solid #f0dfa8;
+      padding: 12px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .botao {
+      display: inline-block;
+      background: #c0392b;
+      padding: 9px 16px;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  </style>
+
+  <header class="wrap">
+    <section width="100%">
+      <div class="topo">
+        <h1 class="titulo-principal">Harmonia Instrumentos Musicais</h1>
+        <h2 class="subtitulo">Tudo para o seu som desde 1998</h2>
+        <a href="carrinho.html" class="carrinho">
+          <img
+            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Cpath%20d%3D%22M1.5%202h3l2.7%2012.4a2%202%200%200%200%202%201.6h8.1a2%202%200%200%200%202-1.6L21%206H6%22%2F%3E%3C%2Fsvg%3E"
+            width="34" height="34" alt="carrinho">
+        </a>
+      </div>
+    </section>
+
+    <section class="menu">
+      <span><a href="index.html">Início</a></span>
+      <span><a href="guitarras.html">Guitarras</a></span>
+      <span><a href="baterias.html">Baterias</a></span>
+      <span><a href="teclados.html">Teclados</a></span>
+      <span><a href="contato.html">Contato</a></span>
+    </section>
+
+    <div class="trilha">
+      <a href="index.html">Início</a> &gt; <a href="guitarras.html">Guitarras</a> &gt;
+      <a href="guitarras.html">Guitarras Elétricas</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="formulario">
+      <h1>Fale com um vendedor</h1>
+
+      <p class="aviso">Os campos marcados com <span style="color:#c0392b">*</span> são obrigatórios.</p>
+
+      <form action="/enviar" method="post">
+
+        <label><b>Nome completo *</b></label>
+        <input type="text" class="nomeEmailSenhaTelEtc" id="nome" placeholder="Digite seu nome completo" required>
+
+        <label><b>E-mail *</b></label>
+        <input type="email" class="nomeEmailSenhaTelEtc" id="email" placeholder="E-mail *" required>
+
+        <label><b>Senha *</b></label>
+        <input type="password" class="nomeEmailSenhaTelEtc" id="senha" placeholder="Crie uma senha" minlength="18"
+          required>
+
+        <label><b>Confirmar Senha *</b></label>
+        <input type="password" class="nomeEmailSenhaTelEtc" id="confirmarSenha" placeholder="Crie uma senha"
+          minlength="18" required>
+
+        <label><b>CPF *</b></label>
+        <input type="text" class="nomeEmailSenhaTelEtc" id="cpf" placeholder="000.000.000-00"
+          pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" required>
+
+        <label><b>Data de Nascimento *</b></label>
+        <input type="date" class="nomeEmailSenhaTelEtc" id="dataNasc" required>
+
+        <label><b>Telefone</b></label>
+        <input type="tel" class="nomeEmailSenhaTelEtc" id="telefone" placeholder="(00) 00000-0000">
+
+        <fieldset>
+          <legend><b>Gênero</b></legend>
+          <label><input type="radio" name="genero" id="fem" value="fem" required> Mulher<br></label>
+          <label><input type="radio" name="genero" id="mas" value="mas"> Homem <br></label>
+          <label><input type="radio" name="genero" id="naoDeclarar" value="naoDeclarar"> Prefiro não declarar</label>
+        </fieldset>
+
+        <fieldset>
+          <legend><b>Assuntos de interesse</b></legend>
+          <label for=""><input type="checkbox" name="interesses" id="i1" value="guitarras"> Guitarras<br></label>
+          <label for=""><input type="checkbox" name="interesses" id="i2" value="baterias"> Baterias<br></label>
+          <label for=""><input type="checkbox" name="interesses" id="i3" value="teclados"> Teclados</label>
+        </fieldset>
+
+        <label for=""><b>Por onde ficou sabendo do nosso site?</b></label>
+        <select name="" id="">
+          <option value="">Instagram</option>
+          <option value="">Facebook</option>
+          <option value="">Whatsapp</option>
+          <option value="">Cliente</option>
+          <option value="">Outro</option>
+        </select>
+
+    <label>
+      <input type="checkbox" name="termos" class="checkbox" required>
+      <a href="#" target="_blank">Li e estou de acordo com os termos</a> *
+    </label>
+
+        <div style="display: none;" aria-hidden="true">
+          <label for="">Deixe esse campo em branco:</label>
+          <input type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button class="botao" onclick="enviarFormulario()">Enviar</button>
+
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>
